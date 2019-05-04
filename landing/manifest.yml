@@ -1,0 +1,5 @@
+---
+applications:
+- buildpack: https://github.com/cloudfoundry/staticfile-buildpack
+  name: NUTRI-IA
+  memory: 56M
