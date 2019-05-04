@@ -8,12 +8,8 @@ body {
   padding: 0;
 }
 
-header {
-  margin-bottom: 40px;
-}
-
 nav {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 nav ul {
@@ -32,7 +28,7 @@ nav ul li {
 
 nav ul li a{
   display: block;
-  color: #273652;
+  color: #ffffff;
   text-align: center;
   padding: 10px 15px;
   text-decoration: none;
@@ -49,7 +45,7 @@ nav ul li a:hover {
 nav a i{
   float: right;
   display: block;
-  color: #273652;
+  color: #ffffff;
   text-align: right;
   padding: 10px 15px;
   text-decoration: none;
@@ -60,12 +56,11 @@ nav a:hover i {
   color: #3CB8BC;
 }
 
-.container {
-  padding: 0 10px;
-}
-
 .portada {
-  height: 95vh;
+  height: 100vh;
+  background-image: url(../images/portada.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 div.contenido-p {
@@ -73,7 +68,8 @@ div.contenido-p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 72vh;
+  height: 85vh;
+  width: 100%;
 }
 
 .contenido-p img {
@@ -82,7 +78,8 @@ div.contenido-p {
 
 .contenido-p p {
   margin-top: 30px;
-  font-size: 18px;
+  font-size: 20px;
+  color: #ffffff;
 }
 
 .boton {
@@ -91,6 +88,7 @@ div.contenido-p {
   text-decoration: none;
   background-color: #3CB8BC;
   border-radius: 60px;
+  transition: 0.2s;
 }
 
 .boton:hover {
