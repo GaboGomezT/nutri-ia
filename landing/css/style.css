@@ -59,6 +59,7 @@ nav a:hover i {
 .portada {
   height: 100vh;
   background-image: url(../images/portada.jpg);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -96,4 +97,27 @@ div.contenido-p {
   padding: 10px 80px;
   color: #ffffff;
   text-decoration: none;
+}
+
+.nosotros {
+  background-color: #DFE6E9;
+}
+
+.nos-c {
+  padding: 55px 0;
+}
+
+.nos-c h1 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+a.conta {
+  color: #000000;
+  text-decoration: none;
+}
+
+.nos-c img {
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
