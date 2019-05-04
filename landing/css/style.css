@@ -10,12 +10,10 @@ body {
 
 header {
   margin-bottom: 40px;
-  padding: 0 40px;
 }
 
-nav img {
-  margin: 0;
-  display: inline-block;
+nav {
+  margin-top: 20px;
 }
 
 nav ul {
@@ -36,8 +34,16 @@ nav ul li a{
   display: block;
   color: #273652;
   text-align: center;
-  padding: 15px;
+  padding: 10px 15px;
   text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #3CB8BC;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 60px;
+  transition: 0.3s;
 }
 
 nav a i{
@@ -45,12 +51,51 @@ nav a i{
   display: block;
   color: #273652;
   text-align: right;
-  padding: 15px;
+  padding: 10px 15px;
   text-decoration: none;
   font-size: 30px;
 }
 
-.titulos p {
+nav a:hover i {
+  color: #3CB8BC;
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.portada {
+  height: 95vh;
+}
+
+div.contenido-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 72vh;
+}
+
+.contenido-p img {
+  width: 25%;
+}
+
+.contenido-p p {
   margin-top: 30px;
   font-size: 18px;
+}
+
+.boton {
+  padding: 10px 45px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #3CB8BC;
+  border-radius: 60px;
+}
+
+.boton:hover {
+  transition: 0.2s;
+  padding: 10px 80px;
+  color: #ffffff;
+  text-decoration: none;
 }
