@@ -1,4 +1,4 @@
-# nutri-ai
+# nutri-ia
 <p align="center"><img src="logo.png" width="200"></p>
 <br>
 <p align="center">Chatbot that evaluates your personality for optimal nutrition/exercise plan in efforts to reach your goal.</p>
