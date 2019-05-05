@@ -19,7 +19,6 @@ export default class SiginForm extends React.Component{
                     keyboardType="default"
                     autoCapitalize="none"
                     autoCorrect={false}
-                    value={this.state.text}
                     onChangeText={text => this.setState({ text })}
                     style={styles.input}
                 />
@@ -31,7 +30,6 @@ export default class SiginForm extends React.Component{
                     keyboardType="default"
                     autoCapitalize="none"
                     autoCorrect={false}
-                    value={this.state.text}
                     onChangeText={text => this.setState({ text })}
                     style={styles.input}
                 />
