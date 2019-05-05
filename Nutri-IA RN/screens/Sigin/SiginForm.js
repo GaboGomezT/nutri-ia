@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {StyleSheet, View, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
 
 export default class SiginForm extends React.Component{
+    state = {
+        text: ''
+      };
     render(){
         return(
             <View style={styles.container}>
@@ -16,6 +19,8 @@ export default class SiginForm extends React.Component{
                     keyboardType="default"
                     autoCapitalize="none"
                     autoCorrect={false}
+                    value={this.state.text}
+                    onChangeText={text => this.setState({ text })}
                     style={styles.input}
                 />
                 <TextInput 
@@ -26,6 +31,8 @@ export default class SiginForm extends React.Component{
                     keyboardType="default"
                     autoCapitalize="none"
                     autoCorrect={false}
+                    value={this.state.text}
+                    onChangeText={text => this.setState({ text })}
                     style={styles.input}
                 />
                 <TextInput 

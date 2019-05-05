@@ -9,7 +9,7 @@ export default class LoginScreen extends React.Component{
           <Image
             style={styles.logo}
             source={require('./../../src/images/logo-n.png')}/>
-          <Text style={styles.title}>Inicia Sesión</Text>
+          <Text style={styles.title}>Iniciar Sesión</Text>
         </View>
         <View style={styles.formContainer}>
           <LoginForm {...this.props}/>
