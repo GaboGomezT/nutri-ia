@@ -150,9 +150,10 @@ a.conta {
 }
 
 .cel {
-  width: 160%;
+  width: 170%;
   position: absolute;
-  top: -185px;
+  top: -187px;
+  right: -260px;
 }
 
 .desarrollo h1 {
@@ -161,6 +162,29 @@ a.conta {
 
 .video {
   height: 550px;
+  background-image: url(../images/foto1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.difu {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video h1 {
+  font-size: 50px;
+  color: #ffffff;
+  padding: 15px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tecnologias {
+  background-color: #FAFAFA;
 }
 
 .tecnologias img {
