@@ -1,5 +1,5 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
@@ -100,16 +100,27 @@ div.contenido-p {
 }
 
 .nosotros {
-  background-color: #DFE6E9;
+  background-color: #FFFFFF;
 }
 
 .nos-c {
-  padding: 55px 0;
+  padding: 50px 0;
 }
 
-.nos-c h1 {
-  font-size: 30px;
+.titulos h1 {
+  font-size: 35px;
   margin-bottom: 50px;
+}
+
+.nos-c h2 {
+  font-size: 25px;
+}
+
+.nos-c p.ocupation {
+  background-color: #3CB8BC;
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 600;
 }
 
 a.conta {
@@ -119,5 +130,21 @@ a.conta {
 
 .nos-c img {
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.desarrollo {
+  background-color: #FAFAFA;
+  padding: 150px;
+  overflow: hidden;
+}
+
+.cel {
+  width: 160%;
+  position: absolute;
+  top: -185px;
+}
+
+.desarrollo h1 {
+  font-style: 35px;
 }
