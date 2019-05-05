@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, Animated, Keyboard} from 'react-native';
+import {StyleSheet, View, Image, Text, KeyboardAvoidingView} from 'react-native';
 import LoginForm from './LoginForm';
 export default class LoginScreen extends React.Component{
   render (){
@@ -78,13 +78,5 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     width: "25%",
     height: "25%",
-  },
-  register:{
-    marginBottom:20, 
-    width:window.width -100,
-    alignItems:'center',
-    justifyContent:'center',
-    height:50,
-    backgroundColor: '#ffae',
   },
 });

@@ -47,7 +47,7 @@ export default class SiginForm extends React.Component{
                     ref={(input) => this.passwordInput = input}
                 />
                 <TouchableOpacity style={styles.buttonContainer} onPress={() =>
-                    this.props.navigation.navigate("Home")}>
+                    this.props.navigation.navigate("Register")}>
                     <Text style={styles.buttonText}>Finalizar</Text>
                 </TouchableOpacity>
             </View>

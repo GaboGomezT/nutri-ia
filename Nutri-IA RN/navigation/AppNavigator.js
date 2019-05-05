@@ -3,13 +3,16 @@ import { createAppContainer, createSwitchNavigator, createStackNavigator } from 
 import HomeScreen from './../screens/Home/HomeScreen';
 import LoginScreen from './../screens/Login/LoginScreen';
 import SiginScreen from './../screens/Sigin/SiginScreen';
+import Register from './../screens/Register/Register';
 
 
 const AppNavigator = createSwitchNavigator({
   Home: HomeScreen,
   Login: LoginScreen,
   Sigin: SiginScreen,
-  
+  Register: Register,
 });
+
+
 
 export default createAppContainer ( AppNavigator );
