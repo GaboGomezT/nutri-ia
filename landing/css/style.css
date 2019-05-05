@@ -163,6 +163,10 @@ a.conta {
   height: 550px;
 }
 
+.tecnologias {
+  width: 100%;
+}
+
 .tecnologias img {
   width: 40%;
   padding: 50px 0;
