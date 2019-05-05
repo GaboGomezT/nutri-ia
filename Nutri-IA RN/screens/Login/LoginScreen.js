@@ -1,32 +1,28 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, KeyboardAvoidingView, ScrollView} from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { StackNavigator } from 'react-navigation';
+import {StyleSheet, View, Image, Text, Animated, Keyboard} from 'react-native';
 import LoginForm from './LoginForm';
-
-
 export default class LoginScreen extends React.Component{
-    render (){
-        return(
-            <KeyboardAwareScrollView style={styles.container} scrollEnabled={false}>
-              <View style={styles.logoContainer}>
-                    <Image 
-                    style={styles.logo}
-                    source={require('./../../src/images/logo-n.png')}/>
-                    <Text style={styles.title}>Inicia Sesión</Text>
-                </View>
-                <View style={styles.formContainer}>
-                    <LoginForm {...this.props}/>
-                </View>
-                <View style={styles.logoFootContainer}>
-                  <Text style={styles.textfoot}>Powered by</Text>
-                  <Image 
-                  style={styles.logofoot}
-                  source={require('./../../src/images/senPyJS.png')}/>
-                </View>
-            </KeyboardAwareScrollView>
-        );
-    }
+  render (){
+    return(
+      <KeyboardAvoidingView style={styles.container}>
+        <View style={styles.logoContainer}>
+          <Image
+            style={styles.logo}
+            source={require('./../../src/images/logo-n.png')}/>
+          <Text style={styles.title}>Inicia Sesión</Text>
+        </View>
+        <View style={styles.formContainer}>
+          <LoginForm {...this.props}/>
+        </View>
+        <View style={styles.logoFootContainer}>
+          <Text style={styles.textfoot}>Powered by</Text>
+          <Image 
+            style={styles.logofoot}
+            source={require('./../../src/images/senPyJS.png')}/>
+          </View>
+      </KeyboardAvoidingView>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -34,7 +30,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     margin: 5,
-      
+
   },
   formContainer:{
     marginTop: 20,
@@ -82,5 +78,13 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     width: "25%",
     height: "25%",
+  },
+  register:{
+    marginBottom:20, 
+    width:window.width -100,
+    alignItems:'center',
+    justifyContent:'center',
+    height:50,
+    backgroundColor: '#ffae',
   },
 });

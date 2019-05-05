@@ -1,10 +1,57 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, TextInput, TouchableOpacity, Text, StatusBar} from 'react-native';
+import {StyleSheet, Dimensions, View, Image, TextInput, TouchableOpacity, Text, StatusBar, Animated, Keyboard} from 'react-native';
+
+const window = Dimensions.get('window');
+
+export const IMAGE_HEIGHT = window.width / 2;
+export const IMAGE_HEIGHT_SMALL = window.width /7;
 
 export default class LoginForm extends React.Component{
+    constructor(props) {
+        super(props);
+    
+        this.keyboardHeight = new Animated.Value(0);
+        this.imageHeight = new Animated.Value(IMAGE_HEIGHT);
+      }
+    
+      componentWillMount () {
+        this.keyboardWillShowSub = Keyboard.addListener('keyboardWillShow', this.keyboardWillShow);
+        this.keyboardWillHideSub = Keyboard.addListener('keyboardWillHide', this.keyboardWillHide);
+      }
+    
+      componentWillUnmount() {
+        this.keyboardWillShowSub.remove();
+        this.keyboardWillHideSub.remove();
+      }
+    
+      keyboardWillShow = (event) => {
+        Animated.parallel([
+          Animated.timing(this.keyboardHeight, {
+            duration: event.duration,
+            toValue: event.endCoordinates.height,
+          }),
+          Animated.timing(this.imageHeight, {
+            duration: event.duration,
+            toValue: IMAGE_HEIGHT_SMALL,
+          }),
+        ]).start();
+      };
+    
+      keyboardWillHide = (event) => {
+        Animated.parallel([
+          Animated.timing(this.keyboardHeight, {
+            duration: event.duration,
+            toValue: 0,
+          }),
+          Animated.timing(this.imageHeight, {
+            duration: event.duration,
+            toValue: IMAGE_HEIGHT,
+          }),
+        ]).start();
+      };
     render(){
         return(
-            <View style={styles.container}>
+            <Animated.View style={[styles.container, { paddingBottom: this.keyboardHeight }]}>
                 <StatusBar
                     barStyle = "light-content"
                 />
@@ -33,7 +80,7 @@ export default class LoginForm extends React.Component{
                     this.props.navigation.navigate("Sigin")}>
                     <Text style={styles.buttonText}>Registrarse</Text>
                 </TouchableOpacity>
-            </View>
+            </Animated.View>
         );
     }
 }
@@ -51,7 +98,7 @@ const styles = StyleSheet.create({
         color: 'rgba(44, 62, 80,0.9)',
         paddingHorizontal: 15,
         borderRadius: 60,
-        width: 275,
+        width: window.width - 275,
     },
     buttonContainer:{
         backgroundColor: '#3cb9bc',
@@ -65,4 +112,11 @@ const styles = StyleSheet.create({
         color: '#FFF',
         fontWeight: '700',
     },
+    register:{
+        marginBottom:20, 
+        width:window.width -100,
+        alignItems:'center',
+        justifyContent:'center',
+        height:50,
+        backgroundColor: '#ffae',}
 });
