@@ -1,0 +1,395 @@
+{
+  "name": "nutri-ia",
+  "intents": [
+    {
+      "intent": "pedir_evaluacion",
+      "examples": [
+        {
+          "text": "evalúame"
+        },
+        {
+          "text": "conóceme"
+        },
+        {
+          "text": "hazme un test"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saludo",
+      "examples": [
+        {
+          "text": "cómo estás?"
+        },
+        {
+          "text": "hola"
+        },
+        {
+          "text": "buenos días"
+        },
+        {
+          "text": "buenas tardes"
+        },
+        {
+          "text": "qué onda?"
+        },
+        {
+          "text": "quiobo!"
+        }
+      ],
+      "description": "iniciar conversacion"
+    },
+    {
+      "intent": "pedir_recomendacion_receta",
+      "examples": [
+        {
+          "text": "qué puedo comer?"
+        },
+        {
+          "text": "qué me sugieres?"
+        },
+        {
+          "text": "recomiéndame una receta"
+        },
+        {
+          "text": "qué me recomiendas?"
+        },
+        {
+          "text": "me recomiendas un plato?"
+        },
+        {
+          "text": "tengo hambre"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "es",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Cuál ha sido tu mayor logro?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1557043808449",
+      "context": {
+        "evaluating": 2
+      },
+      "metadata": {},
+      "conditions": "$evaluating:1",
+      "dialog_node": "node_6_1557049697086"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Has leido algún bueno libro últimamente?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1557049697086",
+      "context": {
+        "evaluating": 3
+      },
+      "metadata": {},
+      "conditions": "$evaluating:2",
+      "dialog_node": "node_8_1557058821194"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Muchas gracias!"
+              },
+              {
+                "text": "Ya puedes hacer consultas de recomendaciones de recetas enfocadas a tus gustos y tus metas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_11_1557059623489",
+      "context": {
+        "evaluated": 1
+      },
+      "metadata": {},
+      "conditions": "$evaluating:6",
+      "dialog_node": "node_12_1557060200847"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Quién es tu héroe personal?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1557059078331",
+      "context": {
+        "evaluating": 5
+      },
+      "metadata": {},
+      "conditions": "$evaluating:4",
+      "dialog_node": "node_10_1557059500122"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Cuál es el trabajo de tus sueños?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1557058821194",
+      "context": {
+        "evaluating": 4
+      },
+      "metadata": {},
+      "conditions": "$evaluating:3",
+      "dialog_node": "node_9_1557059078331"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¿Cuál se asemeja más a tu metas?"
+              },
+              {
+                "text": "Ganar masa muscular"
+              },
+              {
+                "text": "Bajar de peso"
+              },
+              {
+                "text": "Subir de peso"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_10_1557059500122",
+      "context": {
+        "evaluating": 6
+      },
+      "metadata": {},
+      "conditions": "$evaluating:5",
+      "dialog_node": "node_11_1557059623489"
+    },
+    {
+      "type": "standard",
+      "title": "pedir receta",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Claro que sí! Te recomiendo la Avena nutritiva"
+              },
+              {
+                "text": "Por supuesto! Una ensalada verde que te dejará satisfecho"
+              },
+              {
+                "text": "Deberías probar Una gran olla de SOPA DE VERDURAS, te sabrá riquísimo"
+              },
+              {
+                "text": "Prueba Un CHILI picante CON FRIJOLES para darle un poco de sabor a tu día"
+              },
+              {
+                "text": "Te recomiendo Un saludable tazón de PASTA"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#pedir_recomendacion_receta && $evaluated:1",
+      "dialog_node": "node_14_1557061112977",
+      "previous_sibling": "node_3_1557043808449"
+    },
+    {
+      "type": "standard",
+      "title": "evaluación",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfecto, te haré algunas preguntas sencillas."
+              },
+              {
+                "text": "¿Cómo te describirías?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "context": {
+        "evaluating": 1
+      },
+      "metadata": {},
+      "conditions": "#pedir_evaluacion",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1557043808449",
+      "previous_sibling": "node_2_1557043719721"
+    },
+    {
+      "type": "standard",
+      "title": "inicio de conversación",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "¡hola, qué tal! En qué te puedo servir?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#saludo",
+      "dialog_node": "node_2_1557043719721",
+      "previous_sibling": "Bienvenido"
+    },
+    {
+      "type": "standard",
+      "title": "En otras cosas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No le he entendido. Intente reformular la consulta."
+              },
+              {
+                "text": "¿Puede expresarse con otras palabras? No le he entendido."
+              },
+              {
+                "text": "No entendí el significado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "En otras cosas",
+      "previous_sibling": "node_16_1557061695361"
+    },
+    {
+      "type": "standard",
+      "title": "pedir receta - copy1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Debes primero tomar la evaluación"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#pedir_recomendacion_receta && $evaluated:0",
+      "dialog_node": "node_16_1557061695361",
+      "previous_sibling": "node_14_1557061112977"
+    },
+    {
+      "type": "standard",
+      "title": "Bienvenido",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hola. ¿Cómo puedo ayudarle?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "evaluated": 0
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Bienvenido"
+    }
+  ],
+  "workspace_id": "241aed9f-4e58-4c8d-a003-7499763e28a3",
+  "counterexamples": [
+    {
+      "text": "Como una persona alegre que le gusta trabajar mucho"
+    }
+  ],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}

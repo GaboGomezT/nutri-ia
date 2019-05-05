@@ -1,0 +1,16 @@
+---
+declared-services:
+  wga-assistant:
+    label: conversation
+    plan: free
+applications:
+- path: .
+  buildpack: sdk-for-nodejs
+  memory: 256M
+  instances: 1
+  name: watson-google-assistant
+  disk_quota: 256M
+  random-route: false
+  timeout: 180
+  services:
+  - wga-assistant

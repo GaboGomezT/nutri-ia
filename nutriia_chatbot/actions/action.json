@@ -1,0 +1,33 @@
+{
+  "locale": "es",
+  "actions": [
+    {
+      "description": "Watson Assistant for Google Assistant",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "Watson"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            "Recomienda comidas",
+            "Me puedes evaluar?"
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "Watson": {
+      "name": "Watson",
+      "url": "https://watson-google-assistant-20190504074721738.mybluemix.net/",
+      "fulfillmentApiVersion": 2,
+      "in_dialog_intents": [
+        {
+          "name": "actions.intent.CANCEL"
+        }
+      ]
+    }
+  }
+}
