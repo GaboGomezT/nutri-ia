@@ -56,6 +56,16 @@ nav a:hover i {
   color: #3CB8BC;
 }
 
+footer {
+  background-color: #202020;
+}
+
+footer p {
+  margin: 0;
+  padding: 15px;
+  color: #ffffff;
+}
+
 .portada {
   height: 100vh;
   background-image: url(../images/portada.jpg);
@@ -147,4 +157,13 @@ a.conta {
 
 .desarrollo h1 {
   font-style: 35px;
+}
+
+.video {
+  height: 550px;
+}
+
+.tecnologias img {
+  width: 40%;
+  padding: 50px 0;
 }
