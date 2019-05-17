@@ -28,14 +28,15 @@
     <header class="container">
       <nav class="menu-nav">
         <a href="index.html"><img src="images/title.png" alt="logo" style="width: 150px;"></a>
-        <ul>
+        <i class="fas fa-ellipsis-v" onclick="menu()"></i>
+        <ul id="menuNav">
           <li><a href="#desarrollo">Desarrollo</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="https://github.com/GaboGomez09/nutri-ia" target="_blank">Colabora</a></li>
         </ul>
         <a href="https://github.com/GaboGomez09/nutri-ia" target="_blank"><i class="fab fa-github"></i></a>
       </nav>
-        <div class="contenido-p">
+        <div class="contenido-p" id="conP">
           <img src="images/logo.png" alt="NUTRI-AI" class="animated flipInY">
           <p style="margin-bottom: 0;">Llega a tus metas de manera divertida y segura</p>
           <p style="font-size: 14px; margin-top: 0;"><i class="fab fa-google" style="color: #DFD619; font-size: 16px"></i> Recuerda pedirle a tu Google Asistant hablar con NUTRI-IA</p>
@@ -47,11 +48,11 @@
   <section class="desarrollo" id="desarrollo">
     <div class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12">
           <h1 class="text-center" style="font-size:35px;">Sobre la App</h1>
           <p class="text-justify">Por medio de nuestro Chatbot, sientete capaz de llevar un plan nurimental de manera divertida y segura. Cumple tus metas y objetivos, sientete bien contigo y logra lo que te propongas. Nuestra app ah sido desarrollada, pensado en aquellas personas que no se sienten capacez de llevar una dieta y quieren lograr algo mas en sus vidas.</p>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-sm-12 text-center">
             <img src="images/cel.png" alt="celular" class="cel">
         </div>
       </div>
@@ -61,22 +62,22 @@
   <section class="nosotros" id="nosotros">
     <div class="nos-c titulos container">
       <h1 class="text-center">Nuestro Equipo</h1>
-      <div class="row">
-        <div class="col-4 text-center">
+      <div class="nosot">
+        <div class="col-md-4 col-sm-12 text-center">
           <img src="images/dave.jpg" alt="Dave" width="250" height="250">
           <h2>David Victoria</h2>
           <p class="ocupation">UI/UX Designer</p>
           <p><a href="https://github.com/rootlock64" target="_blank" class="conta"><i class="fab fa-github" style="font-size: 20px; vertical-align: middle;"></i> rootlock64</a></p>
           <p><a href="mailto: davidvictoria64@gmail.com" class="conta"><i class="fas fa-envelope" style="font-size: 20px; vertical-align: middle;"></i> davidvictoria64@gmail.com</a></p>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-md-4 col-sm-12 text-center">
           <img src="images/gabo.jpg" alt="Gabo" width="250" height="250">
           <h2>Gabriel Gómez</h2>
           <p class="ocupation">Back-end Developer</p>
           <p><a href="https://github.com/GaboGomez09" target="_blank" class="conta"><i class="fab fa-github" style="font-size: 20px; vertical-align: middle;"></i> GaboGomez09</a></p>
           <p><a href="mailto: gomezgabriel09@gmail.com" class="conta"><i class="fas fa-envelope" style="font-size: 20px; vertical-align: middle;"></i> gomezgabriel09@gmail.com</a></p>
         </div>
-        <div class="col-4 text-center">
+        <div class="col-md-4 col-sm-12 text-center">
           <img src="images/josu.jpg" alt="Josu" width="250" height="250">
           <h2>Josué Hernández</h2>
           <p class="ocupation">Front-end Developer</p>
@@ -88,7 +89,7 @@
   </section>
 
   <section class="tecnologias">
-    <div class="row death">
+    <div class="death">
       <div class="col-3 text-center">
         <img src="images/react.png" alt="reactJS">
       </div>
@@ -120,5 +121,6 @@
     </div>
   </footer>
   <script src="js/script-scroll.js" charset="utf-8"></script>
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>

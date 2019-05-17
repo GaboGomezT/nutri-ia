@@ -56,6 +56,10 @@ nav a:hover i {
   color: #3CB8BC;
 }
 
+.fa-ellipsis-v {
+  display: none;
+}
+
 footer {
   background-color: #202020;
 }
@@ -138,6 +142,10 @@ a.conta {
   text-decoration: none;
 }
 
+.nosot {
+  display: flex;
+}
+
 .nos-c img {
   border-radius: 50%;
   margin-bottom: 30px;
@@ -194,4 +202,68 @@ a.conta {
 
 .death {
   width: 100%;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    padding: 10px;
+    /* display: block; */
+    margin-left: 35px;
+  }
+
+  nav ul li {
+    float: none;
+  }
+
+  .fa-ellipsis-v {
+    display: inline;
+    float: right;
+    color: #ffffff;
+    padding: 12px 10px;
+    font-size: 22px;
+  }
+
+  div.contenido-p {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* height: 50vh; */
+    width: 100%;
+  }
+
+  .fa-github {
+    display: none;
+  }
+
+  .contenido-p img {
+    width: 50%;
+  }
+
+  .desarrollo {
+    padding: 10%;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .cel {
+    width: 120%;
+    position: static;
+    text-align: center;
+  }
+
+  .nosotros {
+    width: 100%;
+  }
+
+  .nosot {
+    display: block;
+  }
+
+  .video h1 {
+    font-size: 30px;
+  }
 }
